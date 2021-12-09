@@ -119,7 +119,7 @@ Julie.addCommand({ pattern: 'show ?(.*)', fromMe: false , desc: "Get info relate
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage("give me the show name"))
+    if (!userName) return await message.sendMessage(errorMessage("give me the show name ahmad"))
 
     await message.sendMessage(infoMessage("Loading..."))
 
