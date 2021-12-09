@@ -20,7 +20,7 @@ Julie.addCommand({ pattern: 'joox ?(.*)', fromMe: false, dontAddCommandList: tru
 
     if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORDIGTV))
 
-    await message.sendMessage(infoMessage("Loading"))
+    await message.sendMessage(infoMessage("Loading Please Wait.."))
 
     await axios
       .get(`https://gratisancok.herokuapp.com/api/joox/?kata=${userName}&apikey=ZailaniGans`)
