@@ -23,12 +23,12 @@ const renek = "```Not found the city!```"
 	    try {
 		    const response = await got(url);
 		    const json = JSON.parse(response.body);
-		    if (response.statusCode === 200) return await message.client.sendMessage(message.jid,  '*Jadwal Sholat*:\n' +
+		    if (response.statusCode === 200) return await message.client.sendMessage(message.jid,  '*By Ahmad*:\n' +
                     '📅 ```' + json.results.datetime[0].date.gregorian + ' | ' + json.results.location.timezone + '```\n' +
                     '🌏 ```' + json.results.location.city + ' | ' + json.results.location.country + '```\n\n' +
 		    '```Imsak   :``` *' + json.results.datetime[0].times.Imsak + '*\n' + 
-		    '```Subuh   :``` *' + json.results.datetime[0].times.Fajr + '*\n' +
-		    '```Dzuhur  :``` *' + json.results.datetime[0].times.Dhuhr + '*\n' + 
+		    '```Fajar   :``` *' + json.results.datetime[0].times.Fajr + '*\n' +
+		    '```Zuhur  :``` *' + json.results.datetime[0].times.Dhuhr + '*\n' + 
 		    '```Asar    :``` *' + json.results.datetime[0].times.Asr + '*\n' + 
 		    '```Maghrib :``` *' + json.results.datetime[0].times.Maghrib + '*\n' +
         '```Isha    :``` *' + json.results.datetime[0].times.Isha + '*\n', MessageType.text);
